@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Electric_Charging_Station>
+    <ChargingSlot slotID="0e0cf57c-1a57-484e-8c9f-a4b271a58a25">
+        <price uom="$">20</price>
+        <slot_number>1</slot_number>
+        <currency>dollars</currency>
+        <manager hasID="40c4ac58-dd16-4e07-adff-caf013a173dd"/>
+        
+        <Date_Time_Location date_time_location_ID="ae218f5b-6632-47eb-82f3-e40153e6f980">
+            <date format="dd/mm/yyyy">22/03/2020</date>
+            <coordinates format="Lat:Long">44°26'50.4"N 26°04'42.3"E</coordinates>
+            <time format="hh:mm">13:00</time>
+            <manager hasId="40c4ac58-dd16-4e07-adff-caf013a173dd"/>
+        </Date_Time_Location>
+    </ChargingSlot>
+
+    <Client hasClientID="6d60404c-a159-42fe-b801-c6c4913b2f28">
+        <name>SamSmith</name>
+        <email_Address>samsmith@gmail.com</email_Address>
+        <phone_number>0745464701</phone_number>
+        <product has_carID="c832450b-e2ff-48a3-8287-e0bf1cda33fc"/>
+        <driver request_slotID="0e0cf57c-1a57-484e-8c9f-a4b271a58a25"/>
+    </Client>
+
+    <Client hasClientID="0b76bb35-2b75-4903-adcd-f55c296c3cd2">
+        <name>SamanthaStone</name>
+        <email_Address>samstone@yahoo.fr</email_Address>
+        <phone_number>0744456101</phone_number>
+        <product has_carID="dfeb4993-3747-444a-bc3a-8142f04cc541"/>
+        <driver requests_slotID="0e0cf57c-1a57-484e-8c9f-a4b271a58a25"/>
+    </Client>
+
+    <Client hasClientID="f4ba0650-1465-47fb-b9af-a7dd6cd8233b">
+        <name>SamuelSulkin</name>
+        <email_Address>samsulkin@yahoo.com</email_Address>
+        <phone_number>0731200999</phone_number>
+        <product has_carID="5cfb83f4-9070-4e38-8853-95a401d552dc"/>
+        <driver requests_slotID="0e0cf57c-1a57-484e-8c9f-a4b271a58a25"/>
+    </Client>
+
+    <Car carID="c832450b-e2ff-48a3-8287-e0bf1cda33fc">
+        <type>Tesla_Model_S_2019</type>
+        <length uom="m">6</length>
+        <width uom="m">2</width>
+    </Car>
+
+    <Car carID="dfeb4993-3747-444a-bc3a-8142f04cc541">
+        <type>BMW_i3</type>
+        <length uom="m">4.5</length>
+        <width uom="m">1.5</width>
+    </Car>
+
+    <Car carID="5cfb83f4-9070-4e38-8853-95a401d552dc">
+        <type>Tesla_Model_X_2018</type>
+        <length uom="m">7</length>
+        <width uom="m">2</width>
+    </Car>
+
+    <Manager hasID="40c4ac58-dd16-4e07-adff-caf013a173dd">
+        <accepted_offer uom="boolean">True</accepted_offer>
+        <payment>Done</payment>
+        <driver payer_ID="6d60404c-a159-42fe-b801-c6c4913b2f28"/>
+    </Manager>
+</Electric_Charging_Station>

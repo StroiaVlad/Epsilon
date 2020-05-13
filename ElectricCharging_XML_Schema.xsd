@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+    <xs:element name="Electric_Charging_Station">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ChargingSlot" maxOccurs="unbounded"  type="ChargingSlotType"/>
+                <xs:element name="Client" maxOccurs="unbounded" type="ClientType"/>
+                <xs:element name="Car" maxOccurs="unbounded" type="CarType"/>
+                <xs:element name="Manager" maxOccurs="unbounded" type="ManagerType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>                
+    
+    
+    <xs:complexType name="ChargingSlotType">
+        <xs:sequence>
+            <xs:element name="price"/>
+            <xs:element name="slot_number"/>
+            <xs:element name="currency"/>            
+            <xs:element name="manager"/>
+            <xs:element name="Date_Time_Location" type="Date_Time_Location_Type"/>
+        </xs:sequence>
+        <xs:attribute name="slotID"/>
+    </xs:complexType>
+    
+    <xs:complexType name="Date_Time_Location_Type">
+        <xs:sequence>
+            <xs:element name="date"/>
+            <xs:element name="coordinates"/>
+            <xs:element name="time"/>            
+            <xs:element name="manager"/>
+        </xs:sequence>
+        <xs:attribute name="date_time_location_ID"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ClientType">
+        <xs:sequence>
+            <xs:element name="name"/>
+            <xs:element name="email_Address"/>
+            <xs:element name="phone_number"/>            
+            <xs:element name="product"/>
+            <xs:element name="driver"/>
+        </xs:sequence>
+        <xs:attribute name="hasClientID"/>
+    </xs:complexType>
+    
+    <xs:complexType name="CarType">
+        <xs:sequence>
+            <xs:element name="type"/>
+            <xs:element name="length"/>
+            <xs:element name="width"/>            
+        </xs:sequence>
+        <xs:attribute name="carID"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ManagerType">
+        <xs:sequence>
+            <xs:element name="accepted_offer"/>
+            <xs:element name="payment"/>            
+            <xs:element name="driver"/>
+        </xs:sequence>
+        <xs:attribute name="hasID"/>
+    </xs:complexType>
+   
+</xs:schema>
